@@ -1,0 +1,73 @@
+[{
+    "id": 1,
+    "name": "AlanaMarko",
+    "image": "./assets/imgs/saga1.jpg",
+    "clicked": false
+},
+{
+    "id": 2,
+    "name": "The Will",
+    "image": "./assets/imgs/thewill.jpg",
+    "clicked": false
+},
+{
+    "id": 3,
+    "name": "Prince Robot",
+    "image": "./assets/imgs/robot.jpg",
+    "clicked": false
+},
+{
+    "id": 4,
+    "name": "Lying Cat",
+    "image": "./assets/imgs/lying.jpeg",
+    "clicked": false
+},
+{
+    "id": 5,
+    "name": "Ghüs",
+    "image": "./assets/imgs/ghus.jpg",
+    "clicked": false
+},
+{
+    "id": 6,
+    "name": "Gwendolyn",
+    "image": "./assets/imgs/gwen.jpg",
+    "clicked": false
+},
+{
+    "id": 7,
+    "name": "Hazel",
+    "image": "./assets/imgs/hazel.jpg",
+    "clicked": false
+},
+{
+    "id": 8,
+    "name": "The Stalk", 
+    "image": "./assets/imgs/thestalk.jpg",
+    "clicked": false
+},
+{
+    "id": 9,
+    "name": "Izabel",
+    "image": "./assets/imgs/izabel.jpg",
+    "clicked": false
+},
+{
+    "id": 10,
+    "name": "The Brand",
+    "image": "./assets/imgs/thebrand.jpg",
+    "clicked": false
+},
+{
+    "id": 11,
+    "name": "Sophie",
+    "image": "./assets/imgs/sophie.jpg",
+    "clicked": false
+},
+{
+    "id": 12,
+    "name": "UpsherDoff",
+    "image": "./assets/imgs/upsherdoff.jpg",
+    "clicked": false
+}
+]
