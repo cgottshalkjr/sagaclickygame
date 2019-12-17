@@ -19,7 +19,7 @@
 {
     "id": 4,
     "name": "Lying Cat",
-    "image": "./assets/imgs/lying.jpeg",
+    "image": "public/assets/imgs/lying.jpeg",
     "clicked": false
 },
 {
