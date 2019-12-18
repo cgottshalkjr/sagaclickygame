@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import NavBar from "../NavBar";
 import SagaChar from "../SagaChar";
 import Wrapper from "../Wrapper";
 import characters from "../../characters.json";
@@ -16,25 +17,28 @@ class Game extends Component {
 
     render() {
         return (
-            <div className="container">
-             <Wrapper>
-                <div className="row">
-                    {
+            <div>
+                <NavBar />
+                <div className="container">
+                    <Wrapper>
+                        <div className="row">
+                            {
 
-                        this.state.characters.map(char => (
-                            <div className="col-3 float-left d-flex">
-                                <SagaChar
-                                    id={char.id}
-                                    key={char.id}
-                                    name={char.name}
-                                    image={char.image}
-                                />
-                            </div>
-                        ))
-                    }
+                                this.state.characters.map(char => (
+                                    <div className="col-3 float-left d-flex">
+                                        <SagaChar
+                                            id={char.id}
+                                            key={char.id}
+                                            name={char.name}
+                                            image={char.image}
+                                        />
+                                    </div>
+                                ))
+                            }
+                        </div>
+
+                    </Wrapper>
                 </div>
-
-                 </Wrapper>
             </div>
         );
     }

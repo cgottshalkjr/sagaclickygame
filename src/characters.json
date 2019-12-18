@@ -25,7 +25,7 @@
 {
     "id": 5,
     "name": "Ghüs",
-    "image": "./assets/imgs/ghus.jpg",
+    "image": "./assets/imgs/ghus2.jpg",
     "clicked": false
 },
 {
@@ -55,7 +55,7 @@
 {
     "id": 10,
     "name": "The Brand",
-    "image": "./assets/imgs/thebrand.jpg",
+    "image": "./assets/imgs/thebrand2.jpg",
     "clicked": false
 },
 {
