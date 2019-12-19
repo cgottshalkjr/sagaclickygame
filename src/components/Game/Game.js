@@ -5,7 +5,6 @@ import Wrapper from "../Wrapper";
 import characters from "../../characters.json";
 import "./game.css";
 
-let correctClicks = 0;
 let score = 0;
 let topScore = 0;
 let message;
@@ -18,7 +17,6 @@ class Game extends Component {
 
     state = {
         characters,
-        correctClicks,
         score,
         topScore,
         message
@@ -26,9 +24,9 @@ class Game extends Component {
 
     whenClicked = char => {
 
-        const characters = this.state.characters;
-
-        const correctClick = characters.filter(click => click.id === char);
+        let characters = this.state.characters;
+        console.log("click works");
+        let correctClick = characters.filter(click => click.id === char);
 
         if (correctClick[0].clicked) {
 
@@ -40,33 +38,34 @@ class Game extends Component {
             }
 
             this.setState({ message });
-            this.setState({ correctClicks });
+            this.setState({ score });
             this.setState({ characters });
 
-        } else if (correctClicks < 11) {
+        } else if (score < 12) {
 
 
             correctClick[0].clicked = true;
 
-            correctClicks++;
+            score++;
 
             message = "Hooray!!!!! Keep it Goin' Bucko!!!";
 
-            if (correctClicks > topScore) {
-                topScore = correctClicks;
+            if (score > topScore) {
+                topScore = score;
                 this.setState({ topScore });
             }
 
             characters.sort(function (a, b) { return 0.5 - Math.random() });
 
             this.setState({ characters });
-            this.setState({ correctClicks });
+            this.setState({ score });
             this.setState({ message });
+
         } else {
 
             correctClick[0].clicked = true;
 
-            correctClicks = 0;
+            score = 0;
 
             message = "TOP FORM OLE SPORT! PLAY AGAIN!!!!"
             topScore = 12;
@@ -79,7 +78,7 @@ class Game extends Component {
             characters.sort(function (a, b) { return 0.5 - Math.random() });
 
             this.setState({ characters });
-            this.setState({ correctClicks });
+            this.setState({ score });
             this.setState({ message });
 
         }
@@ -88,7 +87,11 @@ class Game extends Component {
     render() {
         return (
             <div>
-                <NavBar />
+                <NavBar 
+                    message={this.state.message}
+                    score={this.state.score}
+                    topScore={this.state.topScore}
+                 />
                 <div className="container">
                     <Wrapper>
                         <div className="row">

@@ -1,7 +1,9 @@
 .navbar {
     height: 100px;
-    background-image: url("http://getwallpapers.com/wallpaper/full/6/4/9/371145.jpg");
-   background-size: cover;
+    background-image: url("/../assets/imgs/navbg2.jpg");
+   background-size: 100%;
+   background-repeat: no-repeat;
+   background-position: top right;
     
 }
 
