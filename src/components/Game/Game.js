@@ -1,17 +1,13 @@
 import React, { Component } from "react";
 import NavBar from "../NavBar";
 import SagaChar from "../SagaChar";
-import Wrapper from "../Wrapper";
+import GameBox from "../GameBox";
 import characters from "../../characters.json";
 import "./game.css";
 
 let score = 0;
 let topScore = 0;
 let message;
-
-
-
-
 
 class Game extends Component {
 
@@ -88,12 +84,12 @@ class Game extends Component {
         return (
             <div>
                 <NavBar 
-                    message={this.state.message}
                     score={this.state.score}
+                    message={this.state.message}
                     topScore={this.state.topScore}
                  />
+                    <GameBox>
                 <div className="container">
-                    <Wrapper>
                         <div className="row">
                             {
 
@@ -111,8 +107,8 @@ class Game extends Component {
                             }
                         </div>
 
-                    </Wrapper>
                 </div>
+                    </GameBox>
             </div>
         );
     }
