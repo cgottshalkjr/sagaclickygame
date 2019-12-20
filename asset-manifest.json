@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/sagaclickygame/static/css/main.95323fc5.chunk.css",
+    "main.js": "/sagaclickygame/static/js/main.66cf5f83.chunk.js",
+    "main.js.map": "/sagaclickygame/static/js/main.66cf5f83.chunk.js.map",
+    "runtime-main.js": "/sagaclickygame/static/js/runtime-main.245bc193.js",
+    "runtime-main.js.map": "/sagaclickygame/static/js/runtime-main.245bc193.js.map",
+    "static/css/2.17e5ed98.chunk.css": "/sagaclickygame/static/css/2.17e5ed98.chunk.css",
+    "static/js/2.8ef5f046.chunk.js": "/sagaclickygame/static/js/2.8ef5f046.chunk.js",
+    "static/js/2.8ef5f046.chunk.js.map": "/sagaclickygame/static/js/2.8ef5f046.chunk.js.map",
+    "index.html": "/sagaclickygame/index.html",
+    "precache-manifest.d2efdf15253664d3c98b3981a9bfb8dc.js": "/sagaclickygame/precache-manifest.d2efdf15253664d3c98b3981a9bfb8dc.js",
+    "service-worker.js": "/sagaclickygame/service-worker.js",
+    "static/css/2.17e5ed98.chunk.css.map": "/sagaclickygame/static/css/2.17e5ed98.chunk.css.map",
+    "static/css/main.95323fc5.chunk.css.map": "/sagaclickygame/static/css/main.95323fc5.chunk.css.map",
+    "static/js/2.8ef5f046.chunk.js.LICENSE": "/sagaclickygame/static/js/2.8ef5f046.chunk.js.LICENSE"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.245bc193.js",
+    "static/css/2.17e5ed98.chunk.css",
+    "static/js/2.8ef5f046.chunk.js",
+    "static/css/main.95323fc5.chunk.css",
+    "static/js/main.66cf5f83.chunk.js"
+  ]
+}
