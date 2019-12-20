@@ -1,6 +1,6 @@
 ___
 # SAGA CLICKY GAME
-[LINK TO DEPLOYED SITE!!!](https://serene-beyond-47544.herokuapp.com/)
+[LINK TO DEPLOYED SITE!!!](https://cgottshalkjr.github.io/sagaclickygame/)
 ___
 >Created by **Christopher Gottshalk**
 ---
@@ -16,11 +16,12 @@ ___
 
 ### TECHNOLOGIES USED
 ---
-*React
-*JSX
-*JavaScript
-*Nodejs
-*CSS
-*Bootstrap
-*Git 
-*GitHub
+
+* React
+* JSX
+* JavaScript
+* Nodejs
+* CSS
+* Bootstrap
+* Git
+* Github
