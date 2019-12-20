@@ -16,15 +16,19 @@ class Game extends Component {
 
     whenClicked = char => {
 
-        // let characters = this.state.characters;
-        // console.log("click works");
         let correctClick = this.state.characters.filter(click => click.id === char);
 
         if (correctClick[0].clicked) {
-            console.log("if 1 has been bhit");
+            console.log("if 1 has been hit");
             this.setState({ score: 0 });
             this.setState({ message: "WRONG CHOICE!!!! GAME OVER!!! PLAY AGAIN!!!" });
-
+            
+            let characters = this.state.characters.map(item => {
+                item.clicked = false;
+                
+                return item;
+            });
+            
             this.setState({ characters });
 
         } else {
@@ -36,7 +40,7 @@ class Game extends Component {
 
                 if (this.state.score < 12) {
 
-                    console.log("if 2 has been bhit");
+                    console.log("if 2 has been hit");
 
                     let newCharacters = this.state.characters.map(item => {
                         if (item.id === char) {
@@ -55,7 +59,7 @@ class Game extends Component {
 
                 } else {
                     console.log("12 has been hit")
-                    console.log("if 3 has been bhit");
+                    console.log("if 3 has been hit");
 
                     let newCharacters = this.state.characters.map(item => {
                         item.clicked = false;
@@ -77,7 +81,7 @@ class Game extends Component {
     };
 
     render() {
-        console.log(this.state.characters);
+        console.log(this.state);
         return (
 
             <div>
