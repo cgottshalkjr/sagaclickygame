@@ -1,9 +1,21 @@
 .navbar {
     height: 100px;
-    background-image: url("/../assets/imgs/navbg2.jpg");
-   background-size: 100%;
-   background-repeat: no-repeat;
-   background-position: top right;
-    
+    background-image: url("http://getwallpapers.com/wallpaper/full/1/9/7/371288.jpg");
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: top right;
+    background-color: rgb(251, 84, 132);
 }
 
+.nav-message {
+    overflow-wrap: break-word;
+}
+
+@media screen and (max-width: 700px) {
+    #navLogo {
+        display: none;
+    }
+    .nav-message {
+        display: none;
+    }
+}

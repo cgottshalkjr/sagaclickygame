@@ -5,91 +5,89 @@ import GameBox from "../GameBox";
 import characters from "../../characters.json";
 import "./game.css";
 
-let score = 0;
-let topScore = 0;
-let message;
-
 class Game extends Component {
 
     state = {
         characters,
-        score,
-        topScore,
-        message
+        score: 0,
+        topScore: 0,
+        message: ""
     };
 
     whenClicked = char => {
 
-        let characters = this.state.characters;
-        console.log("click works");
-        let correctClick = characters.filter(click => click.id === char);
+        // let characters = this.state.characters;
+        // console.log("click works");
+        let correctClick = this.state.characters.filter(click => click.id === char);
 
         if (correctClick[0].clicked) {
-
-            score = 0;
-            message = "WRONG CHOICE!!!!"
-
-            for (let i = 0; i < characters.length; i++) {
-                characters[i].clicked = false;
-            }
-
-            this.setState({ message });
-            this.setState({ score });
-            this.setState({ characters });
-
-        } else if (score < 12) {
-
-
-            correctClick[0].clicked = true;
-
-            score++;
-
-            message = "Hooray!!!!! Keep it Goin' Bucko!!!";
-
-            if (score > topScore) {
-                topScore = score;
-                this.setState({ topScore });
-            }
-
-            characters.sort(function (a, b) { return 0.5 - Math.random() });
+            console.log("if 1 has been bhit");
+            this.setState({ score: 0 });
+            this.setState({ message: "WRONG CHOICE!!!! GAME OVER!!! PLAY AGAIN!!!" });
 
             this.setState({ characters });
-            this.setState({ score });
-            this.setState({ message });
 
         } else {
 
-            correctClick[0].clicked = true;
+            this.setState({ score: this.state.score + 1 }, () => {
+                if (this.state.score > this.state.topScore) {
+                    this.setState({ topScore: this.state.score });
+                }
 
-            score = 0;
+                if (this.state.score < 12) {
 
-            message = "TOP FORM OLE SPORT! PLAY AGAIN!!!!"
-            topScore = 12;
-            this.setState({ topScore });
+                    console.log("if 2 has been bhit");
 
-            for (let i = 0; i < characters.length; i++) {
-                characters[i].clicked = false;
-            }
+                    let newCharacters = this.state.characters.map(item => {
+                        if (item.id === char) {
+                            item.clicked = true;
+                        }
 
-            characters.sort(function (a, b) { return 0.5 - Math.random() });
+                        return item;
+                    });
 
-            this.setState({ characters });
-            this.setState({ score });
-            this.setState({ message });
+                    newCharacters = newCharacters.sort(function (a, b) { return 0.5 - Math.random() });
 
+                    this.setState({
+                        characters: newCharacters,
+                        message: "Hooray!!!!! Keep it Goin' Bucko!!!"
+                    });
+
+                } else {
+                    console.log("12 has been hit")
+                    console.log("if 3 has been bhit");
+
+                    let newCharacters = this.state.characters.map(item => {
+                        item.clicked = false;
+
+                        return item;
+                    });
+
+                    newCharacters.sort(function (a, b) { return 0.5 - Math.random() });
+
+                    this.setState({
+                        characters: newCharacters,
+                        score: 0,
+                        message: "TOP FORM OLE SPORT! PLAY AGAIN!!!!"
+                    });
+
+                }
+            });
         }
     };
 
     render() {
+        console.log(this.state.characters);
         return (
+
             <div>
-                <NavBar 
+                <NavBar
                     score={this.state.score}
                     message={this.state.message}
                     topScore={this.state.topScore}
-                 />
-                    <GameBox>
-                <div className="container">
+                />
+                <GameBox>
+                    <div className="container">
                         <div className="row">
                             {
 
@@ -107,8 +105,8 @@ class Game extends Component {
                             }
                         </div>
 
-                </div>
-                    </GameBox>
+                    </div>
+                </GameBox>
             </div>
         );
     }
