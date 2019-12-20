@@ -6,7 +6,7 @@ ___
 ---
 **SAGA CLICKY GAME** is a memory game built with React. Try to click on all 12 character cards without click on the same card twice. Keep trying until you get all 12.
 
-###Demo of the application
+### Demo of the application
 [DEMO OF APP](https://drive.google.com/file/d/1zPO6pZfRjBSnI32ZNiUnlx4TpJ1uz5T7/view)
 
 ### Pictures of App in Action!
@@ -16,11 +16,11 @@ ___
 
 ### TECHNOLOGIES USED
 ---
-React
-JSX
-JavaScript
-Nodejs
-CSS
-Bootstrap
-Git 
-GitHub
+*React
+*JSX
+*JavaScript
+*Nodejs
+*CSS
+*Bootstrap
+*Git 
+*GitHub
